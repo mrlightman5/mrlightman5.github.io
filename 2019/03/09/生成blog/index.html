@@ -17,7 +17,7 @@
 <meta property="og:description" content="如何生成blog前提准备：git node hexo">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2019/03/09/生成blog/%3C%=theme.avatar%%3E">
-<meta property="og:updated_time" content="2019-03-09T11:02:21.707Z">
+<meta property="og:updated_time" content="2019-03-09T12:52:40.370Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何生成blog">
 <meta name="twitter:description" content="如何生成blog前提准备：git node hexo">
@@ -26,7 +26,7 @@
     <link rel="alternative" href="/atom.xml" title="mrlightman" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="img/ride.jpg">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
   <style type="text/css">
@@ -50,7 +50,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="img/ride.jpg" class="js-avatar show">
+			<img src="img/ride.ico" class="js-avatar show">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">终不似少年游</a></h1>
@@ -108,7 +108,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="img/ride.jpg" class="js-avatar">
+				<img src="img/ride.ico" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">终不似少年游</h1>
@@ -186,7 +186,11 @@
 <p>6.添加头像</p>
 <p> 在yilia目录下_config.yml文件中把头像路径改为了<code>avatar: &quot;img/ride.jpg&quot;</code> 图片放在<code>/source/img/ride.jpg</code>  。同时，将D:\blog\blog\themes\yilia\layout_partial目录下left-col.ejs文件第六行改为<img src="<%=theme.avatar%>" class="js-avatar show"></p>
 <p>7。点击所有文章出现1、请确保node版本大于6.2<br>在博客根目录（注意不是yilia根目录）执行以下命令：<br>npm i hexo-generator-json-content –save 等错误</p>
-
+<p>8.配置图片资源</p>
+<p>同于添加头像</p>
+<p>9.文章如何显示摘要</p>
+<p>问题。点击主页时，发现所有文章都是全文显示，不利于查找，可控制显示的字数<br>解决办法。 在你 MD 格式文章正文插入 <!-- more -->即可，只会显示它之前的，此后的就不显示，点击文章标题，全文阅读才可看到，同时注释掉以下 themes/yilia/_config.yml，重复</p>
+<h1 id="excerpt-link-more"><a href="#excerpt-link-more" class="headerlink" title="#excerpt_link: more"></a>#excerpt_link: more</h1>
       
 
       
@@ -294,20 +298,15 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/03/09/如何将本地图片上传至github中/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/03/09/我的第一篇博客/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          如何将本地图片上传到github
+          我的第一篇博客
         
       </div>
     </a>
   
-  
-    <a href="/2019/03/09/我的第一篇博客/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我的第一篇博客</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
@@ -332,7 +331,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#如何生成blog"><span class="toc-number">1.</span> <span class="toc-text">如何生成blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#前提准备：git-node-hexo"><span class="toc-number">1.1.</span> <span class="toc-text">前提准备：git node hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#步骤"><span class="toc-number">1.2.</span> <span class="toc-text">步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-新建一个blog文件夹，cmd输入hexo-init-初始化"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 新建一个blog文件夹，cmd输入hexo init #初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-hexo-s-启动hexo"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.hexo s   启动hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-github建立仓库，"><span class="toc-number">1.2.3.</span> <span class="toc-text">3.github建立仓库，</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-cnpm-install-–save-hexo-deployer-git"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">4.cnpm install –save hexo-deployer-git</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-换主题"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">5.换主题</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#如何生成blog"><span class="toc-number">1.</span> <span class="toc-text">如何生成blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#前提准备：git-node-hexo"><span class="toc-number">1.1.</span> <span class="toc-text">前提准备：git node hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#步骤"><span class="toc-number">1.2.</span> <span class="toc-text">步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-新建一个blog文件夹，cmd输入hexo-init-初始化"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 新建一个blog文件夹，cmd输入hexo init #初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-hexo-s-启动hexo"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.hexo s   启动hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-github建立仓库，"><span class="toc-number">1.2.3.</span> <span class="toc-text">3.github建立仓库，</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-cnpm-install-–save-hexo-deployer-git"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">4.cnpm install –save hexo-deployer-git</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-换主题"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">5.换主题</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#excerpt-link-more"><span class="toc-number">2.</span> <span class="toc-text">#excerpt_link: more</span></a></li></ol>
                     </div>
                 </span>
             </div>
