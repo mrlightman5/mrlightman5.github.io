@@ -17,7 +17,7 @@
 <meta property="og:description" content="如何生成blog前提准备：git node hexo">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2019/03/09/生成blog/%3C%=theme.avatar%%3E">
-<meta property="og:updated_time" content="2019-03-10T01:42:31.109Z">
+<meta property="og:updated_time" content="2019-03-10T12:41:01.190Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何生成blog">
 <meta name="twitter:description" content="如何生成blog前提准备：git node hexo">
@@ -184,7 +184,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">675字</span>
+        <span class="post-count">1.5k字</span>
       </span>
     </span>
 
@@ -193,7 +193,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2分</span>
+        <span class="post-count">6分</span>
       </span>
     </span>
 </div>
@@ -237,6 +237,34 @@
 <blockquote>
 <p>title: json520博客001 #文章标题<br> date: 2015-02-05 12:47:44 #文章生成时间<br> categories: 必须写 #文章分类目录 可以省略<br> tags: 必须写 #文章标签 可以省略<br> description: 问题描述必须写 #你对本页的描述 可以省略<br> 这样每次新建都不用手动添加属性了</p>
 </blockquote>
+<p>13.<strong>9. 设置网站ico</strong></p>
+<ul>
+<li>去<a href="https://link.jianshu.com?t=http://www.bitbug.net/" target="_blank" rel="noopener">比特虫</a>只做icon图标</li>
+<li>把图片放到hexo/source/img文件夹下面，在其它地方用/img/图片名引用就可</li>
+<li>找到hexo\themes\modernist\layout_partial\head.ejs，设置为</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (theme.favicon)&#123; %&gt;</span><br><span class="line">    &lt;link rel=&quot;icon&quot; href=&quot;/img/favicon.ico&quot;&gt;</span><br><span class="line">  &lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+<p>14.添加字数统计和阅读时长功能</p>
+<p>在博客目录下打开Git Bash Here 输入命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --save hexo-wordcount</span><br></pre></td></tr></table></figure>
+<p>2.文件配置<br>在theme\yilia\layout_partial\post下创建word.ejs文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;margin-top:10px;&quot;&gt;</span><br><span class="line">    &lt;span class=&quot;post-time&quot;&gt;</span><br><span class="line">      &lt;span class=&quot;post-meta-item-icon&quot;&gt;</span><br><span class="line">        &lt;i class=&quot;fa fa-keyboard-o&quot;&gt;&lt;/i&gt;</span><br><span class="line">        &lt;span class=&quot;post-meta-item-text&quot;&gt;  字数统计: &lt;/span&gt;</span><br><span class="line">        &lt;span class=&quot;post-count&quot;&gt;&lt;%= wordcount(post.content) %&gt;字&lt;/span&gt;</span><br><span class="line">      &lt;/span&gt;</span><br><span class="line">    &lt;/span&gt;</span><br><span class="line"></span><br><span class="line">    &lt;span class=&quot;post-time&quot;&gt;</span><br><span class="line">      &amp;nbsp; | &amp;nbsp;</span><br><span class="line">      &lt;span class=&quot;post-meta-item-icon&quot;&gt;</span><br><span class="line">        &lt;i class=&quot;fa fa-hourglass-half&quot;&gt;&lt;/i&gt;</span><br><span class="line">        &lt;span class=&quot;post-meta-item-text&quot;&gt;  阅读时长: &lt;/span&gt;</span><br><span class="line">        &lt;span class=&quot;post-count&quot;&gt;&lt;%= min2read(post.content) %&gt;分&lt;/span&gt;</span><br><span class="line">      &lt;/span&gt;</span><br><span class="line">    &lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>然后在 <code>themes/yilia/layout/_partial/article.ejs</code>中添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;article-inner&quot;&gt;</span><br><span class="line">    &lt;% if (post.link || post.title)&#123; %&gt;</span><br><span class="line">      &lt;header class=&quot;article-header&quot;&gt;</span><br><span class="line">        &lt;%- partial(&apos;post/title&apos;, &#123;class_name: &apos;article-title&apos;&#125;) %&gt;</span><br><span class="line">        &lt;% if (!post.noDate)&#123; %&gt;</span><br><span class="line">        &lt;%- partial(&apos;post/date&apos;, &#123;class_name: &apos;archive-article-date&apos;, date_format: null&#125;) %&gt;</span><br><span class="line">        &lt;!-- 需要添加的位置 --&gt;</span><br><span class="line">       </span><br><span class="line">       &lt;!-- 开始添加字数统计--&gt;</span><br><span class="line">        &lt;% if(theme.word_count &amp;&amp; !post.no_word_count)&#123;%&gt;</span><br><span class="line">          &lt;%- partial(&apos;post/word&apos;) %&gt;</span><br><span class="line">          &lt;% &#125; %&gt;</span><br><span class="line">          </span><br><span class="line">          </span><br><span class="line">        &lt;!-- 添加完成 --&gt;</span><br><span class="line"></span><br><span class="line">        &lt;% &#125; %&gt;</span><br><span class="line">      &lt;/header&gt;</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li><p>开启功能<br>在根目录下的_config.yml中添加下面代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 是否开启字数统计</span><br><span class="line">#不需要使用，直接设置值为false，或注释掉</span><br><span class="line">word_count: True</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>15.添加访客人数和总访问量</p>
+<p>不蒜子来进行统计 hexo搭建博客，使用yilia主题</p>
+<h1 id="一、脚本方法使用不蒜子计数"><a href="#一、脚本方法使用不蒜子计数" class="headerlink" title="一、脚本方法使用不蒜子计数"></a>一、脚本方法使用不蒜子计数</h1><h2 id="1-安装脚本（必选）"><a href="#1-安装脚本（必选）" class="headerlink" title="1.安装脚本（必选）"></a>1.安装脚本（必选）</h2><p>要使用不蒜子必须在页面中引入busuanzi.js，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>2.安装标签</p>
+<p>一般显示站点访问量在页脚，所以我们选择在footer.ejs中添加标签，同时我们还可以通过修改主题配置来方便选择是否显示访问量</p>
+<p>我们在themes\yilia\layout_partial\footer.ejs中添加以下代码：（将该文件编码格式为utf-8）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script async src=&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;span id=&quot;busuanzi_container_site_pv&quot;&gt;本站总访问量&lt;span id=&quot;busuanzi_value_site_pv&quot;&gt;&lt;/span&gt;次&lt;/span&gt;</span><br><span class="line">&lt;span class=&quot;post-meta-divider&quot;&gt;|&lt;/span&gt;</span><br><span class="line">&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;本站访客数&lt;span id=&quot;busuanzi_value_site_uv&quot;&lt;/span&gt;人&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<p>这样便可以在底部显示访问量了，并且可以通过更改主题配置中的参数来选择是否显示访问量，只要引入busuanzi.js之后，即使不显示访问量也会统计。</p>
 
       
 
@@ -345,15 +373,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/03/09/如何将本地图片上传至github中/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/03/10/postName/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          如何将本地图片上传到github
+          postName
         
       </div>
     </a>
   
+  
+    <a href="/2019/03/09/如何将本地图片上传至github中/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何将本地图片上传到github</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -378,7 +411,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#如何生成blog"><span class="toc-number">1.</span> <span class="toc-text">如何生成blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#前提准备：git-node-hexo"><span class="toc-number">1.1.</span> <span class="toc-text">前提准备：git node hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#步骤"><span class="toc-number">1.2.</span> <span class="toc-text">步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-新建一个blog文件夹，cmd输入hexo-init-初始化"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 新建一个blog文件夹，cmd输入hexo init #初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-hexo-s-启动hexo"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.hexo s   启动hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-github建立仓库，"><span class="toc-number">1.2.3.</span> <span class="toc-text">3.github建立仓库，</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-cnpm-install-–save-hexo-deployer-git"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">4.cnpm install –save hexo-deployer-git</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-换主题"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">5.换主题</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#excerpt-link-more"><span class="toc-number">2.</span> <span class="toc-text">#excerpt_link: more</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#如何生成blog"><span class="toc-number">1.</span> <span class="toc-text">如何生成blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#前提准备：git-node-hexo"><span class="toc-number">1.1.</span> <span class="toc-text">前提准备：git node hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#步骤"><span class="toc-number">1.2.</span> <span class="toc-text">步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-新建一个blog文件夹，cmd输入hexo-init-初始化"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 新建一个blog文件夹，cmd输入hexo init #初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-hexo-s-启动hexo"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.hexo s   启动hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-github建立仓库，"><span class="toc-number">1.2.3.</span> <span class="toc-text">3.github建立仓库，</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-cnpm-install-–save-hexo-deployer-git"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">4.cnpm install –save hexo-deployer-git</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-换主题"><span class="toc-number">1.2.3.2.</span> <span class="toc-text">5.换主题</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#excerpt-link-more"><span class="toc-number">2.</span> <span class="toc-text">#excerpt_link: more</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#一、脚本方法使用不蒜子计数"><span class="toc-number">3.</span> <span class="toc-text">一、脚本方法使用不蒜子计数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-安装脚本（必选）"><span class="toc-number">3.1.</span> <span class="toc-text">1.安装脚本（必选）</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -398,6 +431,7 @@
   
 
   
+
 
 
 
