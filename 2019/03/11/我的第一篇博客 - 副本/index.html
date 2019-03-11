@@ -6,23 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>如何将本地图片上传至github中 | mrlightman</title>
+  <title>我的第一篇博客 | mrlightman</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="概述本文主要介绍如何将本地图片通过ssh上传到github中 事前准备">
-<meta name="keywords" content="github,markdown">
+  <meta name="description" content="我的第一篇博客记录自己的点滴生活">
+<meta name="keywords" content="生活,兴趣,工作">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何将本地图片上传至github中">
-<meta property="og:url" content="http://yoursite.com/2019/03/10/如何将本地图片上传至github/index.html">
+<meta property="og:title" content="我的第一篇博客">
+<meta property="og:url" content="http://yoursite.com/2019/03/11/我的第一篇博客 - 副本/index.html">
 <meta property="og:site_name" content="mrlightman">
-<meta property="og:description" content="概述本文主要介绍如何将本地图片通过ssh上传到github中 事前准备">
+<meta property="og:description" content="我的第一篇博客记录自己的点滴生活">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://github.com/mrlightman5/image_for_blog/raw/master/1.png">
-<meta property="og:image" content="https://github.com/mrlightman5/image_for_blog/raw/master/2.png">
-<meta property="og:updated_time" content="2019-03-10T13:24:14.506Z">
+<meta property="og:updated_time" content="2019-03-10T13:24:39.490Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何将本地图片上传至github中">
-<meta name="twitter:description" content="概述本文主要介绍如何将本地图片通过ssh上传到github中 事前准备">
-<meta name="twitter:image" content="https://github.com/mrlightman5/image_for_blog/raw/master/1.png">
+<meta name="twitter:title" content="我的第一篇博客">
+<meta name="twitter:description" content="我的第一篇博客记录自己的点滴生活">
   
     <link rel="alternative" href="/atom.xml" title="mrlightman" type="application/atom+xml">
   
@@ -164,20 +161,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-如何将本地图片上传至github" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-我的第一篇博客 - 副本" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      如何将本地图片上传至github中
+      我的第一篇博客
     </h1>
   
 
         
-        <a href="/2019/03/10/如何将本地图片上传至github/" class="archive-article-date">
-  	<time datetime="2019-03-10T08:01:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-10</time>
+        <a href="/2019/03/11/我的第一篇博客 - 副本/" class="archive-article-date">
+  	<time datetime="2019-03-11T12:12:59.885Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-11</time>
 </a>
 		
           <div style="margin-top:10px;">
@@ -185,7 +182,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">541字</span>
+        <span class="post-count">16字</span>
       </span>
     </span>
 
@@ -194,7 +191,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">2分</span>
+        <span class="post-count">1分</span>
       </span>
     </span>
 </div>
@@ -204,39 +201,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>本文主要介绍如何将本地图片通过ssh上传到github中</p>
-<h2 id="事前准备"><a href="#事前准备" class="headerlink" title="事前准备"></a>事前准备</h2><a id="more"></a>
-<p>安装git，创建github账号</p>
-<h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><h4 id="一：创建仓库"><a href="#一：创建仓库" class="headerlink" title="一：创建仓库"></a>一：创建仓库</h4><p>登陆github网址，<a href="https://github.com/" target="_blank" rel="noopener"></a>，新建一个仓库</p>
-<p><img src="https://github.com/mrlightman5/image_for_blog/raw/master/1.png" alt></p>
-<h4 id="二：生成ssh"><a href="#二：生成ssh" class="headerlink" title="二：生成ssh"></a>二：生成ssh</h4><p>利用everything搜索是否有.ssh文件夹，如果有，跳过步骤二，如果没有</p>
-<p>1 命令行设置用户名，邮箱。（”username”和”<a href="mailto:username@email.com" target="_blank" rel="noopener">username@email.com</a>“分别替换成自己的github用户名和邮箱）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;username&quot;</span><br><span class="line">git config --global user.email &quot;username@email.com&quot;</span><br></pre></td></tr></table></figure>
-<p>2 设置push.default参数为默认参数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global push.default matching</span><br></pre></td></tr></table></figure>
-<p>3 生成SSH key，在开始菜单中找到git bash并运行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ssh-keygen -t rsa -C &quot;username@email.com&quot;</span><br></pre></td></tr></table></figure>
-<p>一路enter键（默认路径，默认没有密码登录） ,将会生成两个文件，一个公钥id_rsa.pub，一个私钥，文件在.ssh文件夹路径下</p>
-<p><img src="https://github.com/mrlightman5/image_for_blog/raw/master/2.png" alt></p>
-<h4 id="三：绑定git与github"><a href="#三：绑定git与github" class="headerlink" title="三：绑定git与github"></a>三：绑定git与github</h4><p>1.通过记事本或者notpad打开id_rsa.pub文件，拷贝文本</p>
-<p>2.登陆github官网，进入设置选项，在SSH and GPG keys设置公钥</p>
-<h4 id="四：测试"><a href="#四：测试" class="headerlink" title="四：测试"></a>四：测试</h4><h4 id="打开git-bash，输入"><a href="#打开git-bash，输入" class="headerlink" title="打开git bash，输入"></a>打开git bash，输入</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh git@github.com</span><br></pre></td></tr></table></figure>
-<p>测试是否连接上github，显示如下信息即已经连接成功</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ ssh git@github.com</span><br><span class="line">PTY allocation request failed ``on` `channel 0</span><br><span class="line">Hi ****! You&apos;ve successfully authenticated, but GitHub does not provide shell access.</span><br><span class="line">Connection to github.com closed.</span><br></pre></td></tr></table></figure>
-<h4 id="五：添加本地文件到github仓库"><a href="#五：添加本地文件到github仓库" class="headerlink" title="五：添加本地文件到github仓库"></a>五：添加本地文件到github仓库</h4><p>1.打开git bash，进入你需要初始化的路径，初始化本地仓库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-<p>2.将本地文件上传，以下三个指令都是将文件放到暂存区</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .   //更新所有文件</span><br><span class="line">git add 文件名   //更新某个文件</span><br><span class="line">git add 目录名/  //更新某个目录</span><br></pre></td></tr></table></figure>
-<p>3.添加注释</p>
-<p><code>git commit -m `</code>“相关说明”`</p>
-<p>4.关联到远程仓库（ <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:yourname/yourgit.git）为步骤一中创建的仓库地址</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:yourname/yourgit.git</span><br></pre></td></tr></table></figure>
-<p>5.推送到远程仓库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull --rebase origin master#代码合并，多了README.md文件</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master  # 上传本地代码</span><br></pre></td></tr></table></figure>
-<h2 id="以上完成了将本地文件上传到github仓库中"><a href="#以上完成了将本地文件上传到github仓库中" class="headerlink" title="以上完成了将本地文件上传到github仓库中"></a>以上完成了将本地文件上传到github仓库中</h2><h3 id="六：将github图片插入markdown"><a href="#六：将github图片插入markdown" class="headerlink" title="六：将github图片插入markdown"></a>六：将github图片插入markdown</h3><p>点击github图片，有个downloads，右键复制链接</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](https://github.com/xxxx/xx.jpg)</span><br></pre></td></tr></table></figure>
-
+        <h1 id="我的第一篇博客"><a href="#我的第一篇博客" class="headerlink" title="我的第一篇博客"></a>我的第一篇博客</h1><h3 id="记录自己的点滴生活"><a href="#记录自己的点滴生活" class="headerlink" title="记录自己的点滴生活"></a>记录自己的点滴生活</h3>
       
 
       
@@ -270,11 +235,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">生活</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">markdown</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">兴趣</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工作</a>
         		</li>
       		
 		</ul>
@@ -330,7 +299,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/10/如何将本地图片上传至github/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/11/我的第一篇博客 - 副本/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -344,18 +313,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/03/10/生成blog/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          如何生成blog
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/03/09/pico与github图床的完美结合/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">pico与github图床的完美结合</div>
+    <a href="/2019/03/10/生成blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何生成blog</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -382,7 +342,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事前准备"><span class="toc-number">2.</span> <span class="toc-text">事前准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#具体步骤"><span class="toc-number">3.</span> <span class="toc-text">具体步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#一：创建仓库"><span class="toc-number">3.0.1.</span> <span class="toc-text">一：创建仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#二：生成ssh"><span class="toc-number">3.0.2.</span> <span class="toc-text">二：生成ssh</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#三：绑定git与github"><span class="toc-number">3.0.3.</span> <span class="toc-text">三：绑定git与github</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#四：测试"><span class="toc-number">3.0.4.</span> <span class="toc-text">四：测试</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#打开git-bash，输入"><span class="toc-number">3.0.5.</span> <span class="toc-text">打开git bash，输入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#五：添加本地文件到github仓库"><span class="toc-number">3.0.6.</span> <span class="toc-text">五：添加本地文件到github仓库</span></a></li></ol></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#以上完成了将本地文件上传到github仓库中"><span class="toc-number">4.</span> <span class="toc-text">以上完成了将本地文件上传到github仓库中</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#六：将github图片插入markdown"><span class="toc-number">4.1.</span> <span class="toc-text">六：将github图片插入markdown</span></a></li></ol></li>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#我的第一篇博客"><span class="toc-number">1.</span> <span class="toc-text">我的第一篇博客</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#记录自己的点滴生活"><span class="toc-number">1.0.1.</span> <span class="toc-text">记录自己的点滴生活</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
